@@ -1,0 +1,7 @@
+.control-group
+  %label{for: 'icon_name'} Name
+  %input{type: 'text', name: 'icon[name]', placeholder: 'Name', autofocus: 'autofocus', id: 'icon_name'}
+
+.control-group
+  %label{for: 'icon_description'} Description
+  %textarea.span5{name: 'icon[description]', placeholder: 'Description', id: 'icon_description'}

@@ -1,0 +1,20 @@
+.modal.fade.hide#sign-in-modal
+  %form#sign-in-form
+ 
+    .modal-header
+      %button.close{type: 'button', data: {dismiss: 'modal'}} x
+      %h3 Sign in
+      
+    .modal-body
+      .control-group
+      
+      .control-group
+        %label{for: 'user_email'} Email
+        %input{type: 'email', name: 'user[email]', placeholder: 'Email', autofocus: true, id: 'user_email'}
+      
+      .control-group
+        %label{for: 'user_password'} Password
+        %input{type: 'password', name: 'user[password]', placeholder: 'Password', id: 'user_password'}
+        
+    .modal-footer          
+      %input.btn.btn-primary{type: 'submit', value: 'Sign in'}

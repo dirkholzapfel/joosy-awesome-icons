@@ -1,2 +1,2 @@
-joosy_awesome_icons
+joosy-awesome-icons
 ===================

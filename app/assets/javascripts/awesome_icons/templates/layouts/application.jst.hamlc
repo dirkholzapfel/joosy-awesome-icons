@@ -1,0 +1,10 @@
+%header.navbar.navbar-fixed-top
+  %nav.navbar-inner
+    != @renderDynamic '_navigation', currentUser: Session.currentUser()
+
+#main{role: "main"}
+  .container
+    .row
+      .span12{id: @yield()}
+
+!= @render '_sign_in_modal'

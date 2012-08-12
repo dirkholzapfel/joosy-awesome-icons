@@ -1,0 +1,12 @@
+.modal.fade.hide#new-icon-modal
+  %form#new-icon-form
+  
+    .modal-header
+      %button.close{type: 'button', data: {dismiss: 'modal'}} x
+      %h3 Create new icon
+      
+    .modal-body        
+      != @render '/pages/icon/_form_fields'
+        
+    .modal-footer
+      %input.btn.btn-primary{type: 'submit', value: 'Save'}

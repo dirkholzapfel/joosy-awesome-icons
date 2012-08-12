@@ -1,0 +1,9 @@
+#comments
+  - @comments.each (comment) =>
+    %blockquote
+      %p
+        = comment 'text'
+      %small
+        = comment('user') 'email'
+        said at
+        = moment(comment('created_at')).format('MMMM Do, h:mm:ss a')

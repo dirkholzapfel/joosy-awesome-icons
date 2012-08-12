@@ -1,0 +1,4 @@
+%table.table.table-striped
+  %tbody
+  - @icons.each (icon) =>
+    != @renderDynamic '_icon', icon: icon

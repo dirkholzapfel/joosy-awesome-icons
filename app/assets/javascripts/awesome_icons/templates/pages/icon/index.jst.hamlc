@@ -1,0 +1,9 @@
+#icons.index
+  != @renderDynamic '_icons', icons: @icons
+  
+  %hr
+  != @render '_examples'
+  
+  != @render '_edit_modal'
+
+!= @widget 'div', => new NewIconModalWidget(@icons)

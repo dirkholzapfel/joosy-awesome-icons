@@ -1,0 +1,12 @@
+.modal.fade.hide#edit-icon-modal
+  %form#edit-icon-form
+  
+    .modal-header
+      %button.close{type: 'button', data: {dismiss: 'modal'}} x
+      %h3 Edit icon
+      
+    .modal-body
+      != @render '_form_fields'
+        
+    .modal-footer
+      %input.btn.btn-primary{type: 'submit', value: 'Save'}

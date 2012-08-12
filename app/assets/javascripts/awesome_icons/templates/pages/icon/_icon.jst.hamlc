@@ -1,0 +1,13 @@
+%tr{data: {id: @icon.id()}}
+  %td.span1.center
+    %i{class: @icon.cssClass()}
+  %td.span3
+    %a{href: "/#!icons/#{@icon.id()}"}
+      = @icon 'name'
+  %td.span6
+    = @icon 'description'
+  %td.right.span2
+    %button.btn.btn-mini.btn-info.edit{title: 'Edit'}
+      %i.icon-edit
+    %button.btn.btn-mini.btn-danger.remove{title: 'Delete'}
+      %i.icon-remove

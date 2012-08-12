@@ -1,0 +1,13 @@
+.container
+  %a.brand{href: '/#!'} awesome icons!
+  
+  - if @currentUser.id()
+    %p.navbar-text.pull-left
+      = "Hi, #{@currentUser 'email'}"
+      (
+      %a{href: '/users/sign_out', data: {method: 'delete'}} sign out
+      )
+  - else
+    %button.btn.btn-primary.pull-right{data: {toggle: 'modal', target: '#sign-in-modal'}} Sign in
+
+  %button.btn.btn-primary.pull-right{data: {toggle: 'modal', target: '#new-icon-modal'}} Add Icon

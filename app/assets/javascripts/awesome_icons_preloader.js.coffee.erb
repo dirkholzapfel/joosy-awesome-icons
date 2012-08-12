@@ -1,0 +1,14 @@
+<%= require_joosy_preloader_for 'awesome_icons', preloader: 'caching', force: false %>
+
+bootstrap = ->
+  $('#preloader').remove()
+  Session.setUser window.awesomeIcons.currentUser
+  Joosy.Application.initialize 'awesome_icons','#application',
+    environment: window.joosy.environment
+    debug: false
+
+window.onload = ->
+  Preloader.load window.joosy.libraries,
+    complete: bootstrap
+    start: -> document.getElementById('preloader').style.display = 'block'
+    progress: (percent) -> document.getElementById('percents').innerHTML = percent + '%'
