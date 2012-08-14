@@ -11,7 +11,9 @@ This is a simple app (Rails 3.2.8, Ruby 1.9.3) showing some key features of [Joo
 
 Clone the repo and start the app:
 ```ruby
-bundle install
+git clone git://github.com/dirkholzapfel/joosy-awesome-icons.git
+cd joosy-awesome-icons
+bundle
 bundle exec rake db:create && bundle exec rake db:migrate && bundle exec rake db:seed
 rails s
 ```
