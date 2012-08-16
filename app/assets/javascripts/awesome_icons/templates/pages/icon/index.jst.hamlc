@@ -1,9 +1,18 @@
 #icons.index
+  
+  // Render the icons collection *dynamic* - as soon as it changes it will be rerendered
   != @renderDynamic '_icons', icons: @icons
   
   %hr
+  // Simple partial rendering
   != @render '_examples'
   
-  != @render '_edit_modal'
+  %hr
+  %code
+    User: joosy@bitcrowd.net / Password: joosy
+  
 
+!= @render '_edit_modal'
+
+// Render widget, give the widget access to the icons collection
 != @widget 'div', => new NewIconModalWidget(@icons)

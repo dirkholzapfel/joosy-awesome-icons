@@ -6,6 +6,7 @@ Joosy.namespace 'Icon', ->
     elements:
       'newCommentForm': '#new-comment-form'
     
+    # Request the icon from the server (GET /icons/:id)
     @fetch (complete) ->    
       Icon.find @params.id, (icon) =>
         @data.icon = icon

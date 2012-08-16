@@ -1,6 +1,4 @@
 - if @currentUser.id()
-
-  %form#new-comment-form
-    .control-group
-      %textarea.span7{name: 'comment[text]', placeholder: 'What do you have to say, dude?'}
-    %input.btn.btn-primary{type: 'submit', value: 'Save'}
+  .control-group
+    %textarea.span7{name: 'comment[text]', placeholder: 'What do you have to say, dude?'}
+  %input.btn.btn-primary{type: 'submit', value: 'Save'}

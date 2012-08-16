@@ -4,5 +4,6 @@ class @Icon extends Joosy.Resource.REST
 
   @map 'comments', Comment
   
+  # this is an instance method
   cssClass: ->
     "icon-#{@data.name}"

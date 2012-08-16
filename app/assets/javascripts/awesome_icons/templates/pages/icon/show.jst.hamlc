@@ -1,42 +1,17 @@
 #icons.show
-  .page-header
-    %h1= @icon 'name'
+  
+  // Only rendered dynamic so that you can do fancy things from the console like:
+  // icon = Icon.find(#id)
+  // icon('name', 'glass')
+  != @renderDynamic '_show', icon: @icon
 
-  %blockquote
-    %p= @icon 'description'
-
-  .row
-    .span4.icon6
-      .thumbnail
-        %i{class: @icon.cssClass()}
-        %br
-        300px
-    .span3.icon5
-      .thumbnail
-        %i{class: @icon.cssClass()}
-        %br
-        180px
-
-    .span2.icon4
-      .thumbnail
-        %i{class: @icon.cssClass()}
-        %br
-        100px
-      
-    .span2.icon3
-      .thumbnail
-        %i{class: @icon.cssClass()}
-        %br
-        50px
-      
-    .span1.icon2
-      .thumbnail
-        %i{class: @icon.cssClass()}
-        %br
-        25px
-
+  // The comments collection of the icon is also rendered dynamic! Add a comment - it appears instantly
   != @renderDynamic '_comments', comments: @icon 'comments'
-  != @renderDynamic '_new_comment_form', currentUser: Session.currentUser()
+  
+  // Danger Will Robinson!
+  // Form tag can not be in dynamic rendered template because it would get replaced with a new dom element that has no bindings
+  %form#new-comment-form
+    != @renderDynamic '_new_comment_form', currentUser: Session.currentUser()
   
   %p
     %a{href: '/#!'} back

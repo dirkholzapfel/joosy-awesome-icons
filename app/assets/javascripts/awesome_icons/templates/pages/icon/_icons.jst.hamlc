@@ -1,4 +1,5 @@
 %table.table.table-striped
   %tbody
   - @icons.each (icon) =>
+    // render each icon also dynamic - as soon as an attribute of the icon changes it will be rerendered
     != @renderDynamic '_icon', icon: icon

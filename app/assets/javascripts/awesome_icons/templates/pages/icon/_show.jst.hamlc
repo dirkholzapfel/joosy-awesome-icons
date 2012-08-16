@@ -1,0 +1,35 @@
+.page-header
+  %h1= @icon 'name'
+
+%blockquote
+  %p= @icon 'description'
+
+.row
+  .span4.icon6
+    .thumbnail
+      %i{class: @icon.cssClass()}
+      %br
+      300px
+  .span3.icon5
+    .thumbnail
+      %i{class: @icon.cssClass()}
+      %br
+      180px
+
+  .span2.icon4
+    .thumbnail
+      %i{class: @icon.cssClass()}
+      %br
+      100px
+    
+  .span2.icon3
+    .thumbnail
+      %i{class: @icon.cssClass()}
+      %br
+      50px
+    
+  .span1.icon2
+    .thumbnail
+      %i{class: @icon.cssClass()}
+      %br
+      25px
